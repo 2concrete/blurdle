@@ -1,4 +1,4 @@
-const Image = ({ randomImage }) => {
+const Image = ({ randomImage, guesses }) => {
   return <img className="rounded-md shadow-xl" src={randomImage} />;
 };
 

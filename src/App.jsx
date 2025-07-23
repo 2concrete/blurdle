@@ -11,9 +11,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <Image randomImage={randomImage} />
-      <Guess randomImage={randomImage} />
+    <div className="flex justify-center gap-10 items-center h-screen">
+      <Image randomImage={randomImage} guesses={guesses} />
+      <Guess randomImage={randomImage} guesses={guesses} />
     </div>
   );
 };
