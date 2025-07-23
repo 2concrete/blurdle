@@ -7,7 +7,14 @@ const App = () => {
   const [guesses, setGuesses] = useState(0);
 
   useEffect(() => {
-    setRandomImage("https://picsum.photos/500.jpg");
+    const getRandomImage = async () => {
+      const response = await fetch("/api/random-image");
+      const blob = await response.blob();
+      const imageUrl = URL.createObjectURL(blob);
+      setRandomImage(imageUrl);
+    };
+
+    getRandomImage();
   }, []);
 
   return (
