@@ -4,7 +4,7 @@ import Guess from "./components/Guess";
 
 const App = () => {
   const [randomImage, setRandomImage] = useState(null);
-  const [guesses, setGuesses] = useState(0);
+  const [guesses, setGuesses] = useState([]);
 
   useEffect(() => {
     const getRandomImage = async () => {

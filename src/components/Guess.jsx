@@ -1,29 +1,34 @@
 import GuessInput from "./GuessInput";
 
 const Guess = ({ randomImage, guesses }) => {
+  const guessesLength = guesses.length;
   return (
     <div className="flex flex-col gap-2">
-      {guesses === 1 &&
+      {guessesLength === 0 &&
+        [1].map((item) => (
+          <GuessInput key={item} placeholder={item.toString()} />
+        ))}
+      {guessesLength === 1 &&
         [1, 2].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
-      {guesses === 2 &&
+      {guessesLength === 2 &&
         [1, 2, 3].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
-      {guesses === 3 &&
+      {guessesLength === 3 &&
         [1, 2, 3, 4].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
-      {guesses === 4 &&
+      {guessesLength === 4 &&
         [1, 2, 3, 4, 5].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
-      {guesses === 5 &&
+      {guessesLength === 5 &&
         [1, 2, 3, 4, 5, 6].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
-      {guesses === 6 &&
+      {guessesLength === 6 &&
         [1, 2, 3, 4, 5, 6].map((item) => (
           <GuessInput key={item} placeholder={item.toString()} />
         ))}
