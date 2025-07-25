@@ -31,7 +31,11 @@ const App = () => {
   return (
     <div className="flex justify-center gap-10 items-center h-screen">
       <Image randomImage={randomImage} blur={blur} guesses={guesses} />
-      <Guess randomImage={randomImage} guesses={guesses} />
+      <Guess
+        setGuesses={setGuesses}
+        randomImage={randomImage}
+        guesses={guesses}
+      />
     </div>
   );
 };
